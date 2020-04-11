@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+
+  "name": "AnimeFillerSkipper",
+  "description": "Extension to point out Naruto filler episodes on Netflix",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://www.crunchyroll.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "AnimeFillerSkipper",
+    "default_icon": {
+      "16": "images/get_started16.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["tabs"]
+}
